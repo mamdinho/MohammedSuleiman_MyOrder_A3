@@ -14,6 +14,7 @@
 		400584DE25CD99E500B444BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400584DD25CD99E500B444BC /* Assets.xcassets */; };
 		400584E125CD99E500B444BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400584DF25CD99E500B444BC /* LaunchScreen.storyboard */; };
 		400584EB25CDA68F00B444BC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400584EA25CDA68F00B444BC /* Coffee.swift */; };
+		404A665726012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 404A665526012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld */; };
 		407449B425D3141300490434 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407449B325D3141300490434 /* OrderTableViewController.swift */; };
 		407449B725D3149900490434 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407449B625D3149900490434 /* OrderTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		400584E025CD99E500B444BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		400584E225CD99E500B444BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400584EA25CDA68F00B444BC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		404A665626012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeOrderModel.xcdatamodel; sourceTree = "<group>"; };
 		407449B325D3141300490434 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		407449B625D3149900490434 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				400584E225CD99E500B444BC /* Info.plist */,
 				407449B325D3141300490434 /* OrderTableViewController.swift */,
 				407449B625D3149900490434 /* OrderTableViewCell.swift */,
+				404A665526012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld */,
 			);
 			path = MohammedSuleiman_MyOrder;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				400584D525CD99E300B444BC /* AppDelegate.swift in Sources */,
 				400584D725CD99E300B444BC /* SceneDelegate.swift in Sources */,
 				400584EB25CDA68F00B444BC /* Coffee.swift in Sources */,
+				404A665726012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +365,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		404A665526012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				404A665626012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodel */,
+			);
+			currentVersion = 404A665626012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodel */;
+			path = CoffeeOrderModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 400584C925CD99E300B444BC /* Project object */;
 }

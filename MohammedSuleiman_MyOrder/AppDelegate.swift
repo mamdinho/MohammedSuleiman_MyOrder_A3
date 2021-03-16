@@ -6,6 +6,7 @@
 // Name: Mohammed Suleiman Mohamed Al-Falahy    ID: 121083174
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,5 +33,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    //Core stack (Initializing persistentContainer)
+    lazy var persistentContainer : NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "CoffeeOrderModel")
+        container.loadPersistentStores { (StoreDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error) : \(error.userInfo)")
+            }
+        }
+        return container
+    }()
+    
+    //saves the changes to the db
+    func saveContext(){
+        let context = persistentContainer.viewContext
+        if context.hasChanges{
+            do{
+                try context.save()
+            }catch{
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError) : \(nsError.userInfo)")
+            }
+        }
+    }
 }
 
