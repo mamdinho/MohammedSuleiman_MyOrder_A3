@@ -15,6 +15,7 @@
 		400584E125CD99E500B444BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400584DF25CD99E500B444BC /* LaunchScreen.storyboard */; };
 		400584EB25CDA68F00B444BC /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400584EA25CDA68F00B444BC /* Coffee.swift */; };
 		404A665726012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 404A665526012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld */; };
+		404A665C26013A9A0072F5F3 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404A665B26013A9A0072F5F3 /* DatabaseHelper.swift */; };
 		407449B425D3141300490434 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407449B325D3141300490434 /* OrderTableViewController.swift */; };
 		407449B725D3149900490434 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407449B625D3149900490434 /* OrderTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		400584E225CD99E500B444BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400584EA25CDA68F00B444BC /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		404A665626012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeOrderModel.xcdatamodel; sourceTree = "<group>"; };
+		404A665B26013A9A0072F5F3 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		407449B325D3141300490434 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		407449B625D3149900490434 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,16 +66,15 @@
 		400584D325CD99E300B444BC /* MohammedSuleiman_MyOrder */ = {
 			isa = PBXGroup;
 			children = (
+				404A665A26013A410072F5F3 /* Views */,
+				404A665926013A360072F5F3 /* Controllers */,
 				400584E925CDA67600B444BC /* Models */,
 				400584D425CD99E300B444BC /* AppDelegate.swift */,
 				400584D625CD99E300B444BC /* SceneDelegate.swift */,
-				400584D825CD99E300B444BC /* ViewController.swift */,
 				400584DA25CD99E300B444BC /* Main.storyboard */,
 				400584DD25CD99E500B444BC /* Assets.xcassets */,
 				400584DF25CD99E500B444BC /* LaunchScreen.storyboard */,
 				400584E225CD99E500B444BC /* Info.plist */,
-				407449B325D3141300490434 /* OrderTableViewController.swift */,
-				407449B625D3149900490434 /* OrderTableViewCell.swift */,
 				404A665526012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld */,
 			);
 			path = MohammedSuleiman_MyOrder;
@@ -85,6 +86,24 @@
 				400584EA25CDA68F00B444BC /* Coffee.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		404A665926013A360072F5F3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				404A665B26013A9A0072F5F3 /* DatabaseHelper.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		404A665A26013A410072F5F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				407449B625D3149900490434 /* OrderTableViewCell.swift */,
+				407449B325D3141300490434 /* OrderTableViewController.swift */,
+				400584D825CD99E300B444BC /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +180,7 @@
 				400584D925CD99E300B444BC /* ViewController.swift in Sources */,
 				407449B425D3141300490434 /* OrderTableViewController.swift in Sources */,
 				400584D525CD99E300B444BC /* AppDelegate.swift in Sources */,
+				404A665C26013A9A0072F5F3 /* DatabaseHelper.swift in Sources */,
 				400584D725CD99E300B444BC /* SceneDelegate.swift in Sources */,
 				400584EB25CDA68F00B444BC /* Coffee.swift in Sources */,
 				404A665726012EAF0072F5F3 /* CoffeeOrderModel.xcdatamodeld in Sources */,

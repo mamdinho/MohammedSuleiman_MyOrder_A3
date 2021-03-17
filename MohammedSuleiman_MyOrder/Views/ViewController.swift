@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var numberOfCoffee : UITextField!
     var coffee = Coffee()
     
-    //empty array of coffees ordered when app first starts
-    var coffeesOrdered = [Coffee]()
-    
+    private let dbHelper = DatabaseHelper.getInstance()
     let coffeeTypes = ["Dark Roast", "Double Double", "French Vanilla", "Original Blend", "Half and Half"]
     
     override func viewDidLoad() {
@@ -41,7 +39,10 @@ class ViewController: UIViewController {
             self.coffee.type = self.coffeeTypes[self.pickerView.selectedRow(inComponent: 0)]
             self.coffee.size = self.segmentCoffesize.titleForSegment(at: self.segmentCoffesize.selectedSegmentIndex)!
             self.coffee.numOrdered = Int(self.numberOfCoffee.text!)!
-            coffeesOrdered.append(self.coffee) //add the coffee object to the array
+            
+            //add the coffee order to the db
+            self.dbHelper.addCoffeeOrder(newOrder: self.coffee)
+            //coffeesOrdered.append(self.coffee) //add the coffee object to the array
             
             //call confirm
             self.showConfirm()
@@ -50,15 +51,14 @@ class ViewController: UIViewController {
     
     @objc
     func viewOrders(){
-        if(self.coffeesOrdered.count == 0){
+        if(self.dbHelper.getAllOrdersFromDb() == nil){
             self.showAlert(Errormessage: "No orders available for display. Add an order to continue.")
         }
         //sends user to different screen to view all his/her orders
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
         //make instance as! OrdersViewController to allow sending data over
-        let ordersVc = storyboard.instantiateViewController(withIdentifier: "ordersVC") as! OrderTableViewController
-        ordersVc.coffeesOrdered = self.coffeesOrdered
+        let ordersVc = storyboard.instantiateViewController(withIdentifier: "ordersVC")
         self.navigationController?.pushViewController(ordersVc, animated: true)
     }
     
